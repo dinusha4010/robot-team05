@@ -49,5 +49,13 @@ public class Robot {
 	public static void setRun(int run) {
 		Robot.run = run;
 	}
+	
+	public static void setRun(String run) {
+		try {
+			Robot.run = Integer.parseInt(run);
+		}catch  (Exception e) {
+
+		}
+	}
 
 }
