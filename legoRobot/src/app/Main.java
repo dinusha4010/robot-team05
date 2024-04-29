@@ -6,7 +6,6 @@ import threads.ReadObstacale;
 import threads.ReadRunStatusData;
 import threads.RunLego;
 import threads.UltrasonicSensor;
-import threads.UpdateCurrentSpeed;
 
 public class Main {
 
