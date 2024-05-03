@@ -12,7 +12,7 @@ import data.Path;
 import lejos.hardware.Button;
 
 public class ReadObstacale implements Runnable {
-	private TransferObject transferObject;
+	
 	URL url=null;
 	HttpURLConnection conn=null;
 	InputStreamReader isr = null;
@@ -75,10 +75,20 @@ public class ReadObstacale implements Runnable {
   			e.printStackTrace();
             System.out.println("Some problem!");
   		}
-		if (UltrasonicSensor.getCurrentDistance() < Obstacale.getObtacaDistance()) {
-			transferObject.setFlag(true);
+		if (UltrasonicSensor.getCurrentDistance() < 20) {
+			TransferObject.setFlag(true);
+		 
+			
 		} else {
-			transferObject.setFlag(false);
+			TransferObject.setFlag(false);
+			 
+				
+		}
+		
+		try {
+			Thread.sleep(10);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
 		}
 	}
 

@@ -31,7 +31,7 @@ public class ReadRunStatusData implements Runnable {
 			e.printStackTrace();
 		}
 		try {
-			url = new URL("http://192.168.101.122:8080/rest/legoservice/getrun");
+			url = new URL("http://192.168.101.122:8080/rest/legoservice/getrun2");
 			conn = (HttpURLConnection)url.openConnection();
   			System.out.println(conn.toString()); //Tulostaa vain URLin
 			InputStream is=null;

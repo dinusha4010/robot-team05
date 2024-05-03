@@ -10,14 +10,14 @@ package threads;
  * @since 04/04/2023
  */
 public class TransferObject {
-	private boolean flag;
+	private static boolean flag=false;
 
 	/**
 	 * Checks if an object is detected.
 	 * 
 	 * @return true if an object is detected, false otherwise
 	 */
-	public boolean isObjectdetect() {
+	public static boolean isObjectdetect() {
 		return flag;
 	}
 
@@ -26,7 +26,7 @@ public class TransferObject {
 	 * 
 	 * @param flag The flag value to set
 	 */
-	public void setFlag(boolean flag) {
-		this.flag = flag;
+	public static void setFlag(boolean Flag) {
+		flag = Flag;
 	}
 }
